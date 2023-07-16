@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>instagram-Clone</title>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <script
+      src="https://kit.fontawesome.com/5b938571dd.js"
+      crossorigin="anonymous"
+       ></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="upper-container">
+                <img src="assets/insta-written.png" class="logo">
+                <img src="assets/insta-logo.png" class="logo2">
+
+                <div class="link" >
+                    <img
+                      src="./assets/home.png"
+                      style="height: 1rem; margin-right: 0.5rem"
+                    />
+                    <a href="#">Home</a>
+                  </div>
+                  <div class="link">
+                    <i class="fas fa-search"></i>
+                    <a href="#">Search</a>
+                  </div>
+                  <div class="link">
+                    <img
+                      src="./assets/explore.png"
+                      style="height: 1rem; margin-right: 0.5rem"
+                    />
+                    <a href="#">Explore</a>
+                  </div>
+                  <div class="link">
+                    <img
+                      src="./assets/reels.png"
+                      style="height: 1rem; margin-right: 0.5rem"
+                    />
+                    <a href="#">Reels</a>
+                  </div>
+                  <div class="link">
+                    <img
+                      src="./assets/messenger.png"
+                      style="height: 1rem; margin-right: 0.5rem"
+                    />
+                    <a href="#">Messages</a>
+                  </div>
+                  <div class="link">
+                    <i
+                      data-feather="heart"
+                      style="width: 1rem !important; margin-right: 0.5rem"
+                    ></i>
+                    <a href="#">Notifications</a>
+                  </div>
+                  <div class="link">
+                    <img
+                      src="./assets/create.png"
+                      style="height: 1rem; margin-right: 0.5rem"
+                    />
+                    <a href="#">Create</a>
+                  </div>
+                  <div class="link">
+                    <img
+                      src="./assets/tv.png"
+                      style="height: 1rem; margin-right: 0.5rem"
+                    />
+                    <a href="#">Instagram TV</a>
+                  </div>
+            </div>
+            <div class="bottom-container">
+              <div class="link">
+                <i class="fas fa-ellipsis-h"></i>
+                <a href="#">More</a>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-navbar">
+                <div class="bottom-link">
+                  <img
+                    src="/assets/home.png"
+                    style="height: 1rem; margin-right: 0.5rem"
+                  />
+                </div>
+          
+                <div class="bottom-link">
+                  <img
+                    src="/assets/explore.png"
+                    style="height: 1rem; margin-right: 0.5rem"
+                  />
+                </div>
+                <div class="bottom-link">
+                  <img
+                    src="/assets/reels.png"
+                    style="height: 1rem; margin-right: 0.5rem"
+                  />
+                </div>
+          
+                <div class="bottom-link">
+                  <img
+                    src="/assets/create.png"
+                    style="height: 1rem; margin-right: 0.5rem"
+                  />
+                </div>
+                <div class="bottom-link">
+                  <img src="/assets/tv.png" style="height: 1rem; margin-right: 0.5rem" />
+                </div>
+          </div>
+        </div>
+        <div class="main-container">
+          <div class="story-post-container">
+            <!--stories  -->
+            <div class="stories-container">
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div> <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+                <div class="story">
+                  <div class="gradient-border">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                    />
+                  </div>
+                  <p>Username1</p>
+                </div>
+            </div>
+            <div class="post-container">
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-info-flex">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                      class="profile-pic"
+                    />
+                    <p>Username</p>
+                    <ul>
+                      <li class="list-time">8 hrs</li>
+                    </ul>
+                  </div>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img
+                  src="https://musicart.xboxlive.com/7/93171200-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+                  alt="Post Image"
+                  class="post-img"
+                />
+                <div class="post-icons">
+                  <div class="post-icons-left">
+                    <i data-feather="heart"></i>
+                    <i data-feather="message-circle"></i>
+                    <i data-feather="send"></i>
+                  </div>
+                  <i data-feather="bookmark"></i>
+                </div>
+                <p class="likes">100 likes</p>
+                <p class="caption">@Username Caption goes here...</p>
+                <a href="#" class="comments">View all comments</a>
+              </div>
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-info-flex">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                      class="profile-pic"
+                    />
+                    <p>Username</p>
+                    <ul>
+                      <li class="list-time">8 hrs</li>
+                    </ul>
+                  </div>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img
+                  src="https://musicart.xboxlive.com/7/93171200-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+                  alt="Post Image"
+                  class="post-img"
+                />
+                <div class="post-icons">
+                  <div class="post-icons-left">
+                    <i data-feather="heart"></i>
+                    <i data-feather="message-circle"></i>
+                    <i data-feather="send"></i>
+                  </div>
+                  <i data-feather="bookmark"></i>
+                </div>
+                <p class="likes">100 likes</p>
+                <p class="caption">@Username Caption goes here...</p>
+                <a href="#" class="comments">View all comments</a>
+              </div>
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-info-flex">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                      class="profile-pic"
+                    />
+                    <p>Username</p>
+                    <ul>
+                      <li class="list-time">8 hrs</li>
+                    </ul>
+                  </div>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img
+                  src="https://musicart.xboxlive.com/7/93171200-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+                  alt="Post Image"
+                  class="post-img"
+                />
+                <div class="post-icons">
+                  <div class="post-icons-left">
+                    <i data-feather="heart"></i>
+                    <i data-feather="message-circle"></i>
+                    <i data-feather="send"></i>
+                  </div>
+                  <i data-feather="bookmark"></i>
+                </div>
+                <p class="likes">100 likes</p>
+                <p class="caption">@Username Caption goes here...</p>
+                <a href="#" class="comments">View all comments</a>
+              </div>
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-info-flex">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                      class="profile-pic"
+                    />
+                    <p>Username</p>
+                    <ul>
+                      <li class="list-time">8 hrs</li>
+                    </ul>
+                  </div>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img
+                  src="https://musicart.xboxlive.com/7/93171200-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+                  alt="Post Image"
+                  class="post-img"
+                />
+                <div class="post-icons">
+                  <div class="post-icons-left">
+                    <i data-feather="heart"></i>
+                    <i data-feather="message-circle"></i>
+                    <i data-feather="send"></i>
+                  </div>
+                  <i data-feather="bookmark"></i>
+                </div>
+                <p class="likes">100 likes</p>
+                <p class="caption">@Username Caption goes here...</p>
+                <a href="#" class="comments">View all comments</a>
+              </div>
+              <div class="post">
+                <div class="post-header">
+                  <div class="post-info-flex">
+                    <img
+                      src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                      alt="Profile Picture"
+                      class="profile-pic"
+                    />
+                    <p>Username</p>
+                    <ul>
+                      <li class="list-time">8 hrs</li>
+                    </ul>
+                  </div>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <img
+                  src="https://musicart.xboxlive.com/7/93171200-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+                  alt="Post Image"
+                  class="post-img"
+                />
+                <div class="post-icons">
+                  <div class="post-icons-left">
+                    <i data-feather="heart"></i>
+                    <i data-feather="message-circle"></i>
+                    <i data-feather="send"></i>
+                  </div>
+                  <i data-feather="bookmark"></i>
+                </div>
+                <p class="likes">100 likes</p>
+                <p class="caption">@Username Caption goes here...</p>
+                <a href="#" class="comments">View all comments</a>
+              </div>
+              
+            </div>
+            <!-- post -->
+          </div>
+          <div class="profile-suggestion">
+            <div class="profile-flex">
+              <div class="profile">
+              <img
+                src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                alt="Profile Picture"
+              />
+              <div class="profile-info">
+                <strong>Username</strong>
+                <span class="profile-info-name">Name</span>
+              </div>
+             </div>
+            <div style="color: rgb(20, 20, 152);">Switch</div>
+          </div>  
+          <div class="profile-div">
+            <p style="font-size: 0.8rem; color: var(--light-grey)">
+              Suggested For You
+            </p>
+            <div class="profile">
+              <img
+                src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                alt="Profile Picture"
+              />
+              <div class="profile-info">
+                <strong>Username</strong>
+                <span class="profile-info-name">Name</span>
+              </div>
+            </div>
+            <div class="profile">
+              <img
+                src="https://www.sosyncd.com/wp-content/uploads/2022/06/62-2.png"
+                alt="Profile Picture"
+              />
+              <div class="profile-info">
+                <strong>Username</strong>
+                <span class="profile-info-name">Name</span>
+              </div>
+            </div>
+            <ul class="profile-list">
+              <li>About</li>
+              <li>Help</li>
+              <li>Press</li>
+              <li>API</li>
+              <li>Jobs</li>
+              <li>Privacy</li>
+              <li>Terms</li>
+              <li>Locations</li>
+              <li>Language</li>
+              <li>English</li>
+            </ul>
+            <p style="margin: 0; font-size: 0.5rem; color: var(--light-grey)">
+              Meta Verified © 2023 INSTAGRAM FROM META
+            </p>
+          </div>  
+          </div>
+        </div>
+        <script>
+            feather.replace()
+          </script> 
+    </body> 
+</html>
